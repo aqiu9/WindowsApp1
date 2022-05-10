@@ -393,8 +393,8 @@ Partial Class Form1
         Me.LineShape76.Name = "LineShape76"
         Me.LineShape76.X1 = 407
         Me.LineShape76.X2 = 424
-        Me.LineShape76.Y1 = 125
-        Me.LineShape76.Y2 = 125
+        Me.LineShape76.Y1 = 127
+        Me.LineShape76.Y2 = 127
         '
         'OvalShape75
         '
@@ -2699,7 +2699,7 @@ Partial Class Form1
         Me.Label101.Location = New System.Drawing.Point(743, 42)
         Me.Label101.Margin = New System.Windows.Forms.Padding(0)
         Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(11, 10)
+        Me.Label101.Size = New System.Drawing.Size(29, 10)
         Me.Label101.TabIndex = 110
         Me.Label101.Text = "▲"
         '
@@ -2708,10 +2708,10 @@ Partial Class Form1
         Me.Label102.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label102.BackColor = System.Drawing.Color.Transparent
-        Me.Label102.Location = New System.Drawing.Point(409, 112)
+        Me.Label102.Location = New System.Drawing.Point(408, 113)
         Me.Label102.Margin = New System.Windows.Forms.Padding(0)
         Me.Label102.Name = "Label102"
-        Me.Label102.Size = New System.Drawing.Size(13, 10)
+        Me.Label102.Size = New System.Drawing.Size(19, 13)
         Me.Label102.TabIndex = 111
         Me.Label102.Text = "▼"
         '
@@ -2720,10 +2720,10 @@ Partial Class Form1
         Me.Label103.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label103.BackColor = System.Drawing.Color.Transparent
-        Me.Label103.Location = New System.Drawing.Point(41, 120)
+        Me.Label103.Location = New System.Drawing.Point(41, 119)
         Me.Label103.Margin = New System.Windows.Forms.Padding(0)
         Me.Label103.Name = "Label103"
-        Me.Label103.Size = New System.Drawing.Size(17, 10)
+        Me.Label103.Size = New System.Drawing.Size(19, 14)
         Me.Label103.TabIndex = 112
         Me.Label103.Text = "▼"
         '
