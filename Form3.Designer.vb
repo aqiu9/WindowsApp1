@@ -50,6 +50,7 @@ Partial Class Form3
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.X_down1A = New Microsoft.VisualBasic.PowerPacks.LineShape()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -122,7 +123,7 @@ Partial Class Form3
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.X_down3, Me.OvalShape_ME1, Me.OvalShape_ME2, Me.LineShape_ME, Me.X_down1, Me.LineShape_B, Me.LineShape_A, Me.X_up2, Me.X_up1, Me.LineShape_C, Me.OvalShape_C1, Me.OvalShape_C2, Me.OvalShape_B1, Me.OvalShape_B2, Me.OvalShape_A2, Me.OvalShape_A1, Me.X, Me.X_down2})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.X_down1A, Me.X_down3, Me.OvalShape_ME1, Me.OvalShape_ME2, Me.LineShape_ME, Me.X_down1, Me.LineShape_B, Me.LineShape_A, Me.X_up2, Me.X_up1, Me.LineShape_C, Me.OvalShape_C1, Me.OvalShape_C2, Me.OvalShape_B1, Me.OvalShape_B2, Me.OvalShape_A2, Me.OvalShape_A1, Me.X, Me.X_down2})
         Me.ShapeContainer1.Size = New System.Drawing.Size(482, 160)
         Me.ShapeContainer1.TabIndex = 0
         Me.ShapeContainer1.TabStop = False
@@ -168,7 +169,7 @@ Partial Class Form3
         Me.X_down1.BorderWidth = 4
         Me.X_down1.Name = "X_down1"
         Me.X_down1.X1 = 27
-        Me.X_down1.X2 = 239
+        Me.X_down1.X2 = 135
         Me.X_down1.Y1 = 113
         Me.X_down1.Y2 = 113
         '
@@ -338,6 +339,15 @@ Partial Class Form3
         Me.CheckBox1.UseVisualStyleBackColor = True
         Me.CheckBox1.Visible = False
         '
+        'X_down1A
+        '
+        Me.X_down1A.BorderWidth = 4
+        Me.X_down1A.Name = "X_down1A"
+        Me.X_down1A.X1 = 135
+        Me.X_down1A.X2 = 239
+        Me.X_down1A.Y1 = 113
+        Me.X_down1A.Y2 = 113
+        '
         'Form3
         '
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
@@ -387,4 +397,5 @@ Partial Class Form3
     Friend WithEvents Button1 As Button
     Friend WithEvents X_down3 As PowerPacks.LineShape
     Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents X_down1A As PowerPacks.LineShape
 End Class

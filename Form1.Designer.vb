@@ -23,6 +23,18 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape_dy5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_green7_4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow9_5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow8_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow7 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow5_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red9 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_red8 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_red3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_red2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
@@ -129,61 +141,61 @@ Partial Class Form1
         Me.OvalShape12 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape11 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape10 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
-        Me.LineShape50 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape49 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape48 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape47 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy7_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy7_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy6_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy6_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape46 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OvalShape9 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape8 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape7 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
-        Me.LineShape6_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red6_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_red6_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_red5_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_red5_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red4_4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red4_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape40 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OvalShape6 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape5 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape4 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
-        Me.LineShape39 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape38 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape37 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape36 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape41 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape35 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape34 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape33 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_green7_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_green7_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_green6_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_green6_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow8_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow8_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow9_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow9_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.OvalShape3 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape2 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.OvalShape1 = New Microsoft.VisualBasic.PowerPacks.OvalShape()
         Me.LineShape32 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape31 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_red7_4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red6_6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape27 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_red7_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red6_5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape25 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape24 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_red7_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape22 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red6_4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy7_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape21 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape20 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_red7_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape18 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape17 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape16 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_red6_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_green7_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow9_4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow9_3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape15 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape14 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape13 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape12 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape11 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape10 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape9 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape8 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_red9 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape6 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_ = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_dy6_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_red4_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape3 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_green6_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_yellow5_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_red4_1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -304,10 +316,106 @@ Partial Class Form1
         Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
         Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
         Me.ShapeContainer1.Name = "ShapeContainer1"
-        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape_red8, Me.LineShape_red3, Me.LineShape_red2, Me.LineShape_red1, Me.LineShape77, Me.OvalShape78, Me.OvalShape77, Me.OvalShape76, Me.RectangleShape4, Me.RectangleShape3, Me.LineShape76, Me.OvalShape75, Me.OvalShape74, Me.LineShape75, Me.RectangleShape2, Me.LineShape74, Me.LineShape73, Me.OvalShape73, Me.OvalShape72, Me.OvalShape71, Me.LineShape72, Me.OvalShape70, Me.OvalShape69, Me.OvalShape68, Me.LineShape71, Me.OvalShape67, Me.OvalShape63, Me.OvalShape66, Me.OvalShape65, Me.LineShape70, Me.OvalShape64, Me.OvalShape62, Me.OvalShape61, Me.OvalShape60, Me.OvalShape59, Me.OvalShape58, Me.LineShape69, Me.OvalShape57, Me.OvalShape56, Me.LineShape68, Me.OvalShape55, Me.OvalShape54, Me.OvalShape53, Me.OvalShape52, Me.LineShape60, Me.OvalShape51, Me.OvalShape50, Me.LineShape67, Me.OvalShape49, Me.OvalShape48, Me.OvalShape47, Me.OvalShape46, Me.OvalShape45, Me.LineShape59, Me.OvalShape44, Me.OvalShape43, Me.OvalShape42, Me.LineShape58, Me.OvalShape41, Me.OvalShape40, Me.LineShape57, Me.OvalShape39, Me.OvalShape38, Me.OvalShape37, Me.LineShape30, Me.OvalShape36, Me.OvalShape35, Me.OvalShape34, Me.OvalShape33, Me.LineShape29, Me.OvalShape32, Me.OvalShape31, Me.OvalShape30, Me.OvalShape29, Me.OvalShape28, Me.OvalShape27, Me.OvalShape26, Me.OvalShape25, Me.OvalShape24, Me.OvalShape23, Me.OvalShape22, Me.OvalShape21, Me.OvalShape20, Me.OvalShape19, Me.OvalShape18, Me.OvalShape17, Me.OvalShape16, Me.RectangleShape1, Me.LineShape66, Me.LineShape65, Me.LineShape64, Me.LineShape63, Me.LineShape62, Me.LineShape61, Me.LineShape56, Me.OvalShape15, Me.OvalShape14, Me.OvalShape13, Me.LineShape55, Me.LineShape54, Me.LineShape53, Me.LineShape52, Me.LineShape51, Me.OvalShape12, Me.OvalShape11, Me.OvalShape10, Me.LineShape50, Me.LineShape49, Me.LineShape48, Me.LineShape47, Me.LineShape46, Me.OvalShape9, Me.OvalShape8, Me.OvalShape7, Me.LineShape6_2, Me.LineShape_red6_1, Me.LineShape_red5_2, Me.LineShape_red5_1, Me.LineShape40, Me.OvalShape6, Me.OvalShape5, Me.OvalShape4, Me.LineShape39, Me.LineShape38, Me.LineShape37, Me.LineShape36, Me.LineShape41, Me.LineShape35, Me.LineShape34, Me.LineShape33, Me.OvalShape3, Me.OvalShape2, Me.OvalShape1, Me.LineShape32, Me.LineShape31, Me.LineShape_red7_4, Me.LineShape27, Me.LineShape_red7_3, Me.LineShape25, Me.LineShape24, Me.LineShape_red7_2, Me.LineShape22, Me.LineShape21, Me.LineShape20, Me.LineShape_red7_1, Me.LineShape18, Me.LineShape17, Me.LineShape16, Me.LineShape15, Me.LineShape14, Me.LineShape13, Me.LineShape12, Me.LineShape11, Me.LineShape10, Me.LineShape9, Me.LineShape8, Me.LineShape_red9, Me.LineShape6, Me.LineShape_red4_2, Me.LineShape4, Me.LineShape3, Me.LineShape_red4_1, Me.LineShape1})
+        Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape_dy5, Me.LineShape_dy4, Me.LineShape_dy3, Me.LineShape_dy2, Me.LineShape_dy1, Me.LineShape_green7_4, Me.LineShape_yellow9_5, Me.LineShape_yellow8_1, Me.LineShape_yellow7, Me.LineShape_yellow5_2, Me.LineShape_yellow4, Me.LineShape_red9, Me.LineShape_red8, Me.LineShape_red3, Me.LineShape_red2, Me.LineShape_red1, Me.LineShape77, Me.OvalShape78, Me.OvalShape77, Me.OvalShape76, Me.RectangleShape4, Me.RectangleShape3, Me.LineShape76, Me.OvalShape75, Me.OvalShape74, Me.LineShape75, Me.RectangleShape2, Me.LineShape74, Me.LineShape73, Me.OvalShape73, Me.OvalShape72, Me.OvalShape71, Me.LineShape72, Me.OvalShape70, Me.OvalShape69, Me.OvalShape68, Me.LineShape71, Me.OvalShape67, Me.OvalShape63, Me.OvalShape66, Me.OvalShape65, Me.LineShape70, Me.OvalShape64, Me.OvalShape62, Me.OvalShape61, Me.OvalShape60, Me.OvalShape59, Me.OvalShape58, Me.LineShape69, Me.OvalShape57, Me.OvalShape56, Me.LineShape68, Me.OvalShape55, Me.OvalShape54, Me.OvalShape53, Me.OvalShape52, Me.LineShape60, Me.OvalShape51, Me.OvalShape50, Me.LineShape67, Me.OvalShape49, Me.OvalShape48, Me.OvalShape47, Me.OvalShape46, Me.OvalShape45, Me.LineShape59, Me.OvalShape44, Me.OvalShape43, Me.OvalShape42, Me.LineShape58, Me.OvalShape41, Me.OvalShape40, Me.LineShape57, Me.OvalShape39, Me.OvalShape38, Me.OvalShape37, Me.LineShape30, Me.OvalShape36, Me.OvalShape35, Me.OvalShape34, Me.OvalShape33, Me.LineShape29, Me.OvalShape32, Me.OvalShape31, Me.OvalShape30, Me.OvalShape29, Me.OvalShape28, Me.OvalShape27, Me.OvalShape26, Me.OvalShape25, Me.OvalShape24, Me.OvalShape23, Me.OvalShape22, Me.OvalShape21, Me.OvalShape20, Me.OvalShape19, Me.OvalShape18, Me.OvalShape17, Me.OvalShape16, Me.RectangleShape1, Me.LineShape66, Me.LineShape65, Me.LineShape64, Me.LineShape63, Me.LineShape62, Me.LineShape61, Me.LineShape56, Me.OvalShape15, Me.OvalShape14, Me.OvalShape13, Me.LineShape55, Me.LineShape54, Me.LineShape53, Me.LineShape52, Me.LineShape51, Me.OvalShape12, Me.OvalShape11, Me.OvalShape10, Me.LineShape_dy7_2, Me.LineShape_dy7_1, Me.LineShape_dy6_3, Me.LineShape_dy6_2, Me.LineShape46, Me.OvalShape9, Me.OvalShape8, Me.OvalShape7, Me.LineShape_red6_2, Me.LineShape_red6_1, Me.LineShape_red4_4, Me.LineShape_red4_3, Me.LineShape40, Me.OvalShape6, Me.OvalShape5, Me.OvalShape4, Me.LineShape_green7_2, Me.LineShape_green7_1, Me.LineShape_green6_3, Me.LineShape_green6_2, Me.LineShape_yellow8_2, Me.LineShape_yellow8_3, Me.LineShape_yellow9_1, Me.LineShape_yellow9_2, Me.OvalShape3, Me.OvalShape2, Me.OvalShape1, Me.LineShape32, Me.LineShape31, Me.LineShape_red6_6, Me.LineShape27, Me.LineShape_red6_5, Me.LineShape25, Me.LineShape24, Me.LineShape_red6_4, Me.LineShape_dy7_3, Me.LineShape21, Me.LineShape20, Me.LineShape_red6_3, Me.LineShape_green7_3, Me.LineShape_yellow9_4, Me.LineShape_yellow9_3, Me.LineShape15, Me.LineShape14, Me.LineShape13, Me.LineShape12, Me.LineShape11, Me.LineShape_yellow6, Me.LineShape9, Me.LineShape8, Me.LineShape_, Me.LineShape_dy6_1, Me.LineShape_red4_2, Me.LineShape_green6_1, Me.LineShape_yellow5_1, Me.LineShape_red4_1, Me.LineShape1})
         Me.ShapeContainer1.Size = New System.Drawing.Size(899, 800)
         Me.ShapeContainer1.TabIndex = 0
         Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape_dy5
+        '
+        Me.LineShape_dy5.Name = "LineShape_dy5"
+        Me.LineShape_dy5.X1 = 416
+        Me.LineShape_dy5.X2 = 416
+        Me.LineShape_dy5.Y1 = 246
+        Me.LineShape_dy5.Y2 = 368
+        '
+        'LineShape_dy4
+        '
+        Me.LineShape_dy4.Name = "LineShape_dy4"
+        Me.LineShape_dy4.X1 = 416
+        Me.LineShape_dy4.X2 = 416
+        Me.LineShape_dy4.Y1 = 190
+        Me.LineShape_dy4.Y2 = 206
+        '
+        'LineShape_dy3
+        '
+        Me.LineShape_dy3.Name = "LineShape_dy3"
+        Me.LineShape_dy3.X1 = 416
+        Me.LineShape_dy3.X2 = 416
+        Me.LineShape_dy3.Y1 = 138
+        Me.LineShape_dy3.Y2 = 151
+        '
+        'LineShape_dy2
+        '
+        Me.LineShape_dy2.Name = "LineShape_dy2"
+        Me.LineShape_dy2.X1 = 416
+        Me.LineShape_dy2.X2 = 416
+        Me.LineShape_dy2.Y1 = 94
+        Me.LineShape_dy2.Y2 = 106
+        '
+        'LineShape_dy1
+        '
+        Me.LineShape_dy1.Name = "LineShape_dy1"
+        Me.LineShape_dy1.X1 = 416
+        Me.LineShape_dy1.X2 = 416
+        Me.LineShape_dy1.Y1 = 56
+        Me.LineShape_dy1.Y2 = 67
+        '
+        'LineShape_green7_4
+        '
+        Me.LineShape_green7_4.Name = "LineShape_green7_4"
+        Me.LineShape_green7_4.X1 = 224
+        Me.LineShape_green7_4.X2 = 752
+        Me.LineShape_green7_4.Y1 = 560
+        Me.LineShape_green7_4.Y2 = 560
+        '
+        'LineShape_yellow9_5
+        '
+        Me.LineShape_yellow9_5.Name = "LineShape_yellow9_5"
+        Me.LineShape_yellow9_5.X1 = 750
+        Me.LineShape_yellow9_5.X2 = 750
+        Me.LineShape_yellow9_5.Y1 = 203
+        Me.LineShape_yellow9_5.Y2 = 560
+        '
+        'LineShape_yellow8_1
+        '
+        Me.LineShape_yellow8_1.Name = "LineShape_yellow8_1"
+        Me.LineShape_yellow8_1.X1 = 48
+        Me.LineShape_yellow8_1.X2 = 48
+        Me.LineShape_yellow8_1.Y1 = 404
+        Me.LineShape_yellow8_1.Y2 = 610
+        '
+        'LineShape_yellow7
+        '
+        Me.LineShape_yellow7.Name = "LineShape_yellow7"
+        Me.LineShape_yellow7.X1 = 48
+        Me.LineShape_yellow7.X2 = 48
+        Me.LineShape_yellow7.Y1 = 331
+        Me.LineShape_yellow7.Y2 = 355
+        '
+        'LineShape_yellow5_2
+        '
+        Me.LineShape_yellow5_2.Name = "LineShape_yellow5_2"
+        Me.LineShape_yellow5_2.X1 = 170
+        Me.LineShape_yellow5_2.X2 = 170
+        Me.LineShape_yellow5_2.Y1 = 237
+        Me.LineShape_yellow5_2.Y2 = 300
+        '
+        'LineShape_yellow4
+        '
+        Me.LineShape_yellow4.Name = "LineShape_yellow4"
+        Me.LineShape_yellow4.X1 = 48
+        Me.LineShape_yellow4.X2 = 48
+        Me.LineShape_yellow4.Y1 = 197
+        Me.LineShape_yellow4.Y2 = 210
+        '
+        'LineShape_red9
+        '
+        Me.LineShape_red9.Name = "LineShape_red9"
+        Me.LineShape_red9.X1 = 750
+        Me.LineShape_red9.X2 = 750
+        Me.LineShape_red9.Y1 = 50
+        Me.LineShape_red9.Y2 = 111
         '
         'LineShape_red8
         '
@@ -1137,37 +1245,37 @@ Partial Class Form1
         Me.OvalShape10.Name = "OvalShape10"
         Me.OvalShape10.Size = New System.Drawing.Size(18, 16)
         '
-        'LineShape50
+        'LineShape_dy7_2
         '
-        Me.LineShape50.Name = "LineShape50"
-        Me.LineShape50.X1 = 469
-        Me.LineShape50.X2 = 469
-        Me.LineShape50.Y1 = 632
-        Me.LineShape50.Y2 = 740
+        Me.LineShape_dy7_2.Name = "LineShape_dy7_2"
+        Me.LineShape_dy7_2.X1 = 469
+        Me.LineShape_dy7_2.X2 = 469
+        Me.LineShape_dy7_2.Y1 = 632
+        Me.LineShape_dy7_2.Y2 = 740
         '
-        'LineShape49
+        'LineShape_dy7_1
         '
-        Me.LineShape49.Name = "LineShape49"
-        Me.LineShape49.X1 = 450
-        Me.LineShape49.X2 = 469
-        Me.LineShape49.Y1 = 741
-        Me.LineShape49.Y2 = 741
+        Me.LineShape_dy7_1.Name = "LineShape_dy7_1"
+        Me.LineShape_dy7_1.X1 = 450
+        Me.LineShape_dy7_1.X2 = 469
+        Me.LineShape_dy7_1.Y1 = 741
+        Me.LineShape_dy7_1.Y2 = 741
         '
-        'LineShape48
+        'LineShape_dy6_3
         '
-        Me.LineShape48.Name = "LineShape48"
-        Me.LineShape48.X1 = 396
-        Me.LineShape48.X2 = 421
-        Me.LineShape48.Y1 = 748
-        Me.LineShape48.Y2 = 748
+        Me.LineShape_dy6_3.Name = "LineShape_dy6_3"
+        Me.LineShape_dy6_3.X1 = 396
+        Me.LineShape_dy6_3.X2 = 421
+        Me.LineShape_dy6_3.Y1 = 748
+        Me.LineShape_dy6_3.Y2 = 748
         '
-        'LineShape47
+        'LineShape_dy6_2
         '
-        Me.LineShape47.Name = "LineShape47"
-        Me.LineShape47.X1 = 396
-        Me.LineShape47.X2 = 396
-        Me.LineShape47.Y1 = 633
-        Me.LineShape47.Y2 = 748
+        Me.LineShape_dy6_2.Name = "LineShape_dy6_2"
+        Me.LineShape_dy6_2.X1 = 396
+        Me.LineShape_dy6_2.X2 = 396
+        Me.LineShape_dy6_2.Y1 = 633
+        Me.LineShape_dy6_2.Y2 = 748
         '
         'LineShape46
         '
@@ -1197,13 +1305,13 @@ Partial Class Form1
         Me.OvalShape7.Name = "OvalShape7"
         Me.OvalShape7.Size = New System.Drawing.Size(18, 16)
         '
-        'LineShape6_2
+        'LineShape_red6_2
         '
-        Me.LineShape6_2.Name = "LineShape6_2"
-        Me.LineShape6_2.X1 = 349
-        Me.LineShape6_2.X2 = 349
-        Me.LineShape6_2.Y1 = 632
-        Me.LineShape6_2.Y2 = 740
+        Me.LineShape_red6_2.Name = "LineShape_red6_2"
+        Me.LineShape_red6_2.X1 = 349
+        Me.LineShape_red6_2.X2 = 349
+        Me.LineShape_red6_2.Y1 = 632
+        Me.LineShape_red6_2.Y2 = 740
         '
         'LineShape_red6_1
         '
@@ -1213,21 +1321,21 @@ Partial Class Form1
         Me.LineShape_red6_1.Y1 = 741
         Me.LineShape_red6_1.Y2 = 741
         '
-        'LineShape_red5_2
+        'LineShape_red4_4
         '
-        Me.LineShape_red5_2.Name = "LineShape_red5_2"
-        Me.LineShape_red5_2.X1 = 276
-        Me.LineShape_red5_2.X2 = 301
-        Me.LineShape_red5_2.Y1 = 748
-        Me.LineShape_red5_2.Y2 = 748
+        Me.LineShape_red4_4.Name = "LineShape_red4_4"
+        Me.LineShape_red4_4.X1 = 276
+        Me.LineShape_red4_4.X2 = 301
+        Me.LineShape_red4_4.Y1 = 748
+        Me.LineShape_red4_4.Y2 = 748
         '
-        'LineShape_red5_1
+        'LineShape_red4_3
         '
-        Me.LineShape_red5_1.Name = "LineShape_red5_1"
-        Me.LineShape_red5_1.X1 = 276
-        Me.LineShape_red5_1.X2 = 276
-        Me.LineShape_red5_1.Y1 = 633
-        Me.LineShape_red5_1.Y2 = 748
+        Me.LineShape_red4_3.Name = "LineShape_red4_3"
+        Me.LineShape_red4_3.X1 = 276
+        Me.LineShape_red4_3.X2 = 276
+        Me.LineShape_red4_3.Y1 = 633
+        Me.LineShape_red4_3.Y2 = 748
         '
         'LineShape40
         '
@@ -1257,69 +1365,69 @@ Partial Class Form1
         Me.OvalShape4.Name = "OvalShape4"
         Me.OvalShape4.Size = New System.Drawing.Size(18, 16)
         '
-        'LineShape39
+        'LineShape_green7_2
         '
-        Me.LineShape39.Name = "LineShape39"
-        Me.LineShape39.X1 = 230
-        Me.LineShape39.X2 = 230
-        Me.LineShape39.Y1 = 632
-        Me.LineShape39.Y2 = 740
+        Me.LineShape_green7_2.Name = "LineShape_green7_2"
+        Me.LineShape_green7_2.X1 = 230
+        Me.LineShape_green7_2.X2 = 230
+        Me.LineShape_green7_2.Y1 = 632
+        Me.LineShape_green7_2.Y2 = 740
         '
-        'LineShape38
+        'LineShape_green7_1
         '
-        Me.LineShape38.Name = "LineShape38"
-        Me.LineShape38.X1 = 211
-        Me.LineShape38.X2 = 230
-        Me.LineShape38.Y1 = 741
-        Me.LineShape38.Y2 = 741
+        Me.LineShape_green7_1.Name = "LineShape_green7_1"
+        Me.LineShape_green7_1.X1 = 211
+        Me.LineShape_green7_1.X2 = 230
+        Me.LineShape_green7_1.Y1 = 741
+        Me.LineShape_green7_1.Y2 = 741
         '
-        'LineShape37
+        'LineShape_green6_3
         '
-        Me.LineShape37.Name = "LineShape37"
-        Me.LineShape37.X1 = 157
-        Me.LineShape37.X2 = 182
-        Me.LineShape37.Y1 = 748
-        Me.LineShape37.Y2 = 748
+        Me.LineShape_green6_3.Name = "LineShape_green6_3"
+        Me.LineShape_green6_3.X1 = 157
+        Me.LineShape_green6_3.X2 = 182
+        Me.LineShape_green6_3.Y1 = 748
+        Me.LineShape_green6_3.Y2 = 748
         '
-        'LineShape36
+        'LineShape_green6_2
         '
-        Me.LineShape36.Name = "LineShape36"
-        Me.LineShape36.X1 = 157
-        Me.LineShape36.X2 = 157
-        Me.LineShape36.Y1 = 633
-        Me.LineShape36.Y2 = 748
+        Me.LineShape_green6_2.Name = "LineShape_green6_2"
+        Me.LineShape_green6_2.X1 = 157
+        Me.LineShape_green6_2.X2 = 157
+        Me.LineShape_green6_2.Y1 = 633
+        Me.LineShape_green6_2.Y2 = 748
         '
-        'LineShape41
+        'LineShape_yellow8_2
         '
-        Me.LineShape41.Name = "LineShape41"
-        Me.LineShape41.X1 = 38
-        Me.LineShape41.X2 = 38
-        Me.LineShape41.Y1 = 633
-        Me.LineShape41.Y2 = 748
+        Me.LineShape_yellow8_2.Name = "LineShape_yellow8_2"
+        Me.LineShape_yellow8_2.X1 = 38
+        Me.LineShape_yellow8_2.X2 = 38
+        Me.LineShape_yellow8_2.Y1 = 633
+        Me.LineShape_yellow8_2.Y2 = 748
         '
-        'LineShape35
+        'LineShape_yellow8_3
         '
-        Me.LineShape35.Name = "LineShape35"
-        Me.LineShape35.X1 = 38
-        Me.LineShape35.X2 = 63
-        Me.LineShape35.Y1 = 748
-        Me.LineShape35.Y2 = 748
+        Me.LineShape_yellow8_3.Name = "LineShape_yellow8_3"
+        Me.LineShape_yellow8_3.X1 = 38
+        Me.LineShape_yellow8_3.X2 = 63
+        Me.LineShape_yellow8_3.Y1 = 748
+        Me.LineShape_yellow8_3.Y2 = 748
         '
-        'LineShape34
+        'LineShape_yellow9_1
         '
-        Me.LineShape34.Name = "LineShape34"
-        Me.LineShape34.X1 = 92
-        Me.LineShape34.X2 = 111
-        Me.LineShape34.Y1 = 741
-        Me.LineShape34.Y2 = 741
+        Me.LineShape_yellow9_1.Name = "LineShape_yellow9_1"
+        Me.LineShape_yellow9_1.X1 = 92
+        Me.LineShape_yellow9_1.X2 = 111
+        Me.LineShape_yellow9_1.Y1 = 741
+        Me.LineShape_yellow9_1.Y2 = 741
         '
-        'LineShape33
+        'LineShape_yellow9_2
         '
-        Me.LineShape33.Name = "LineShape33"
-        Me.LineShape33.X1 = 111
-        Me.LineShape33.X2 = 111
-        Me.LineShape33.Y1 = 632
-        Me.LineShape33.Y2 = 740
+        Me.LineShape_yellow9_2.Name = "LineShape_yellow9_2"
+        Me.LineShape_yellow9_2.X1 = 111
+        Me.LineShape_yellow9_2.X2 = 111
+        Me.LineShape_yellow9_2.Y1 = 632
+        Me.LineShape_yellow9_2.Y2 = 740
         '
         'OvalShape3
         '
@@ -1357,13 +1465,13 @@ Partial Class Form1
         Me.LineShape31.Y1 = 701
         Me.LineShape31.Y2 = 697
         '
-        'LineShape_red7_4
+        'LineShape_red6_6
         '
-        Me.LineShape_red7_4.Name = "LineShape_red7_4"
-        Me.LineShape_red7_4.X1 = 760
-        Me.LineShape_red7_4.X2 = 860
-        Me.LineShape_red7_4.Y1 = 184
-        Me.LineShape_red7_4.Y2 = 184
+        Me.LineShape_red6_6.Name = "LineShape_red6_6"
+        Me.LineShape_red6_6.X1 = 760
+        Me.LineShape_red6_6.X2 = 860
+        Me.LineShape_red6_6.Y1 = 184
+        Me.LineShape_red6_6.Y2 = 184
         '
         'LineShape27
         '
@@ -1373,13 +1481,13 @@ Partial Class Form1
         Me.LineShape27.Y1 = 184
         Me.LineShape27.Y2 = 590
         '
-        'LineShape_red7_3
+        'LineShape_red6_5
         '
-        Me.LineShape_red7_3.Name = "LineShape_red7_3"
-        Me.LineShape_red7_3.X1 = 810
-        Me.LineShape_red7_3.X2 = 810
-        Me.LineShape_red7_3.Y1 = 184
-        Me.LineShape_red7_3.Y2 = 579
+        Me.LineShape_red6_5.Name = "LineShape_red6_5"
+        Me.LineShape_red6_5.X1 = 810
+        Me.LineShape_red6_5.X2 = 810
+        Me.LineShape_red6_5.Y1 = 184
+        Me.LineShape_red6_5.Y2 = 579
         '
         'LineShape25
         '
@@ -1397,21 +1505,21 @@ Partial Class Form1
         Me.LineShape24.Y1 = 39
         Me.LineShape24.Y2 = 48
         '
-        'LineShape_red7_2
+        'LineShape_red6_4
         '
-        Me.LineShape_red7_2.Name = "LineShape_red7_2"
-        Me.LineShape_red7_2.X1 = 340
-        Me.LineShape_red7_2.X2 = 810
-        Me.LineShape_red7_2.Y1 = 579
-        Me.LineShape_red7_2.Y2 = 580
+        Me.LineShape_red6_4.Name = "LineShape_red6_4"
+        Me.LineShape_red6_4.X1 = 340
+        Me.LineShape_red6_4.X2 = 810
+        Me.LineShape_red6_4.Y1 = 579
+        Me.LineShape_red6_4.Y2 = 580
         '
-        'LineShape22
+        'LineShape_dy7_3
         '
-        Me.LineShape22.Name = "LineShape22"
-        Me.LineShape22.X1 = 456
-        Me.LineShape22.X2 = 456
-        Me.LineShape22.Y1 = 562
-        Me.LineShape22.Y2 = 606
+        Me.LineShape_dy7_3.Name = "LineShape_dy7_3"
+        Me.LineShape_dy7_3.X1 = 456
+        Me.LineShape_dy7_3.X2 = 456
+        Me.LineShape_dy7_3.Y1 = 560
+        Me.LineShape_dy7_3.Y2 = 606
         '
         'LineShape21
         '
@@ -1429,37 +1537,37 @@ Partial Class Form1
         Me.LineShape20.Y1 = 590
         Me.LineShape20.Y2 = 609
         '
-        'LineShape_red7_1
+        'LineShape_red6_3
         '
-        Me.LineShape_red7_1.Name = "LineShape_red7_1"
-        Me.LineShape_red7_1.X1 = 340
-        Me.LineShape_red7_1.X2 = 340
-        Me.LineShape_red7_1.Y1 = 579
-        Me.LineShape_red7_1.Y2 = 606
+        Me.LineShape_red6_3.Name = "LineShape_red6_3"
+        Me.LineShape_red6_3.X1 = 340
+        Me.LineShape_red6_3.X2 = 340
+        Me.LineShape_red6_3.Y1 = 579
+        Me.LineShape_red6_3.Y2 = 606
         '
-        'LineShape18
+        'LineShape_green7_3
         '
-        Me.LineShape18.Name = "LineShape18"
-        Me.LineShape18.X1 = 222
-        Me.LineShape18.X2 = 222
-        Me.LineShape18.Y1 = 561
-        Me.LineShape18.Y2 = 606
+        Me.LineShape_green7_3.Name = "LineShape_green7_3"
+        Me.LineShape_green7_3.X1 = 222
+        Me.LineShape_green7_3.X2 = 222
+        Me.LineShape_green7_3.Y1 = 561
+        Me.LineShape_green7_3.Y2 = 606
         '
-        'LineShape17
+        'LineShape_yellow9_4
         '
-        Me.LineShape17.Name = "LineShape17"
-        Me.LineShape17.X1 = 105
-        Me.LineShape17.X2 = 750
-        Me.LineShape17.Y1 = 560
-        Me.LineShape17.Y2 = 560
+        Me.LineShape_yellow9_4.Name = "LineShape_yellow9_4"
+        Me.LineShape_yellow9_4.X1 = 105
+        Me.LineShape_yellow9_4.X2 = 750
+        Me.LineShape_yellow9_4.Y1 = 560
+        Me.LineShape_yellow9_4.Y2 = 560
         '
-        'LineShape16
+        'LineShape_yellow9_3
         '
-        Me.LineShape16.Name = "LineShape16"
-        Me.LineShape16.X1 = 105
-        Me.LineShape16.X2 = 105
-        Me.LineShape16.Y1 = 561
-        Me.LineShape16.Y2 = 606
+        Me.LineShape_yellow9_3.Name = "LineShape_yellow9_3"
+        Me.LineShape_yellow9_3.X1 = 105
+        Me.LineShape_yellow9_3.X2 = 105
+        Me.LineShape_yellow9_3.Y1 = 561
+        Me.LineShape_yellow9_3.Y2 = 606
         '
         'LineShape15
         '
@@ -1501,13 +1609,13 @@ Partial Class Form1
         Me.LineShape11.Y1 = 377
         Me.LineShape11.Y2 = 377
         '
-        'LineShape10
+        'LineShape_yellow6
         '
-        Me.LineShape10.Name = "LineShape10"
-        Me.LineShape10.X1 = 49
-        Me.LineShape10.X2 = 143
-        Me.LineShape10.Y1 = 329
-        Me.LineShape10.Y2 = 329
+        Me.LineShape_yellow6.Name = "LineShape_yellow6"
+        Me.LineShape_yellow6.X1 = 49
+        Me.LineShape_yellow6.X2 = 143
+        Me.LineShape_yellow6.Y1 = 329
+        Me.LineShape_yellow6.Y2 = 329
         '
         'LineShape9
         '
@@ -1525,22 +1633,22 @@ Partial Class Form1
         Me.LineShape8.Y1 = 40
         Me.LineShape8.Y2 = 49
         '
-        'LineShape_red9
+        'LineShape_
         '
-        Me.LineShape_red9.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.LineShape_red9.Name = "LineShape_red9"
-        Me.LineShape_red9.X1 = 750
-        Me.LineShape_red9.X2 = 750
-        Me.LineShape_red9.Y1 = 47
-        Me.LineShape_red9.Y2 = 559
+        Me.LineShape_.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.LineShape_.Name = "LineShape_"
+        Me.LineShape_.X1 = 750
+        Me.LineShape_.X2 = 750
+        Me.LineShape_.Y1 = 47
+        Me.LineShape_.Y2 = 559
         '
-        'LineShape6
+        'LineShape_dy6_1
         '
-        Me.LineShape6.Name = "LineShape6"
-        Me.LineShape6.X1 = 416
-        Me.LineShape6.X2 = 416
-        Me.LineShape6.Y1 = 49
-        Me.LineShape6.Y2 = 611
+        Me.LineShape_dy6_1.Name = "LineShape_dy6_1"
+        Me.LineShape_dy6_1.X1 = 416
+        Me.LineShape_dy6_1.X2 = 416
+        Me.LineShape_dy6_1.Y1 = 49
+        Me.LineShape_dy6_1.Y2 = 611
         '
         'LineShape_red4_2
         '
@@ -1550,21 +1658,21 @@ Partial Class Form1
         Me.LineShape_red4_2.Y1 = 182
         Me.LineShape_red4_2.Y2 = 606
         '
-        'LineShape4
+        'LineShape_green6_1
         '
-        Me.LineShape4.Name = "LineShape4"
-        Me.LineShape4.X1 = 170
-        Me.LineShape4.X2 = 170
-        Me.LineShape4.Y1 = 235
-        Me.LineShape4.Y2 = 606
+        Me.LineShape_green6_1.Name = "LineShape_green6_1"
+        Me.LineShape_green6_1.X1 = 170
+        Me.LineShape_green6_1.X2 = 170
+        Me.LineShape_green6_1.Y1 = 235
+        Me.LineShape_green6_1.Y2 = 606
         '
-        'LineShape3
+        'LineShape_yellow5_1
         '
-        Me.LineShape3.Name = "LineShape3"
-        Me.LineShape3.X1 = 62
-        Me.LineShape3.X2 = 170
-        Me.LineShape3.Y1 = 235
-        Me.LineShape3.Y2 = 235
+        Me.LineShape_yellow5_1.Name = "LineShape_yellow5_1"
+        Me.LineShape_yellow5_1.X1 = 62
+        Me.LineShape_yellow5_1.X2 = 170
+        Me.LineShape_yellow5_1.Y1 = 235
+        Me.LineShape_yellow5_1.Y2 = 235
         '
         'LineShape_red4_1
         '
@@ -2699,7 +2807,7 @@ Partial Class Form1
         Me.Label101.Location = New System.Drawing.Point(743, 42)
         Me.Label101.Margin = New System.Windows.Forms.Padding(0)
         Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(29, 10)
+        Me.Label101.Size = New System.Drawing.Size(13, 10)
         Me.Label101.TabIndex = 110
         Me.Label101.Text = "▲"
         '
@@ -2708,10 +2816,10 @@ Partial Class Form1
         Me.Label102.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label102.BackColor = System.Drawing.Color.Transparent
-        Me.Label102.Location = New System.Drawing.Point(408, 113)
+        Me.Label102.Location = New System.Drawing.Point(408, 115)
         Me.Label102.Margin = New System.Windows.Forms.Padding(0)
         Me.Label102.Name = "Label102"
-        Me.Label102.Size = New System.Drawing.Size(19, 13)
+        Me.Label102.Size = New System.Drawing.Size(10, 11)
         Me.Label102.TabIndex = 111
         Me.Label102.Text = "▼"
         '
@@ -2720,10 +2828,10 @@ Partial Class Form1
         Me.Label103.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label103.BackColor = System.Drawing.Color.Transparent
-        Me.Label103.Location = New System.Drawing.Point(41, 119)
+        Me.Label103.Location = New System.Drawing.Point(41, 120)
         Me.Label103.Margin = New System.Windows.Forms.Padding(0)
         Me.Label103.Name = "Label103"
-        Me.Label103.Size = New System.Drawing.Size(19, 14)
+        Me.Label103.Size = New System.Drawing.Size(13, 13)
         Me.Label103.TabIndex = 112
         Me.Label103.Text = "▼"
         '
@@ -2744,8 +2852,8 @@ Partial Class Form1
         Me.Controls.Add(Me.Label95)
         Me.Controls.Add(Me.Label94)
         Me.Controls.Add(Me.Label93)
-        Me.Controls.Add(Me.Label92)
         Me.Controls.Add(Me.Label91)
+        Me.Controls.Add(Me.Label92)
         Me.Controls.Add(Me.Label90)
         Me.Controls.Add(Me.Label89)
         Me.Controls.Add(Me.Label88)
@@ -2857,13 +2965,13 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents ShapeContainer1 As PowerPacks.ShapeContainer
-    Friend WithEvents LineShape4 As PowerPacks.LineShape
-    Friend WithEvents LineShape3 As PowerPacks.LineShape
+    Friend WithEvents LineShape_green6_1 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow5_1 As PowerPacks.LineShape
     Friend WithEvents LineShape_red4_1 As PowerPacks.LineShape
     Friend WithEvents LineShape1 As PowerPacks.LineShape
     Friend WithEvents LineShape_red4_2 As PowerPacks.LineShape
-    Friend WithEvents LineShape_red9 As PowerPacks.LineShape
-    Friend WithEvents LineShape6 As PowerPacks.LineShape
+    Friend WithEvents LineShape_ As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy6_1 As PowerPacks.LineShape
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents XJZ220 As Label
@@ -2874,17 +2982,17 @@ Partial Class Form1
     Friend WithEvents LineShape13 As PowerPacks.LineShape
     Friend WithEvents LineShape12 As PowerPacks.LineShape
     Friend WithEvents LineShape11 As PowerPacks.LineShape
-    Friend WithEvents LineShape10 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow6 As PowerPacks.LineShape
     Friend WithEvents LineShape25 As PowerPacks.LineShape
     Friend WithEvents LineShape24 As PowerPacks.LineShape
-    Friend WithEvents LineShape_red7_2 As PowerPacks.LineShape
-    Friend WithEvents LineShape22 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red6_4 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy7_3 As PowerPacks.LineShape
     Friend WithEvents LineShape21 As PowerPacks.LineShape
     Friend WithEvents LineShape20 As PowerPacks.LineShape
-    Friend WithEvents LineShape_red7_1 As PowerPacks.LineShape
-    Friend WithEvents LineShape18 As PowerPacks.LineShape
-    Friend WithEvents LineShape17 As PowerPacks.LineShape
-    Friend WithEvents LineShape16 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red6_3 As PowerPacks.LineShape
+    Friend WithEvents LineShape_green7_3 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow9_4 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow9_3 As PowerPacks.LineShape
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents TextBox3 As TextBox
@@ -2892,8 +3000,8 @@ Partial Class Form1
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents LineShape27 As PowerPacks.LineShape
-    Friend WithEvents LineShape_red7_3 As PowerPacks.LineShape
-    Friend WithEvents LineShape_red7_4 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red6_5 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red6_6 As PowerPacks.LineShape
     Friend WithEvents Label2 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents LineShape31 As PowerPacks.LineShape
@@ -2901,10 +3009,10 @@ Partial Class Form1
     Friend WithEvents OvalShape3 As PowerPacks.OvalShape
     Friend WithEvents OvalShape2 As PowerPacks.OvalShape
     Friend WithEvents OvalShape1 As PowerPacks.OvalShape
-    Friend WithEvents LineShape34 As PowerPacks.LineShape
-    Friend WithEvents LineShape33 As PowerPacks.LineShape
-    Friend WithEvents LineShape41 As PowerPacks.LineShape
-    Friend WithEvents LineShape35 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow9_1 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow9_2 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow8_2 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow8_3 As PowerPacks.LineShape
     Friend WithEvents LineShape56 As PowerPacks.LineShape
     Friend WithEvents OvalShape15 As PowerPacks.OvalShape
     Friend WithEvents OvalShape14 As PowerPacks.OvalShape
@@ -2917,26 +3025,26 @@ Partial Class Form1
     Friend WithEvents OvalShape12 As PowerPacks.OvalShape
     Friend WithEvents OvalShape11 As PowerPacks.OvalShape
     Friend WithEvents OvalShape10 As PowerPacks.OvalShape
-    Friend WithEvents LineShape50 As PowerPacks.LineShape
-    Friend WithEvents LineShape49 As PowerPacks.LineShape
-    Friend WithEvents LineShape48 As PowerPacks.LineShape
-    Friend WithEvents LineShape47 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy7_2 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy7_1 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy6_3 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy6_2 As PowerPacks.LineShape
     Friend WithEvents LineShape46 As PowerPacks.LineShape
     Friend WithEvents OvalShape9 As PowerPacks.OvalShape
     Friend WithEvents OvalShape8 As PowerPacks.OvalShape
     Friend WithEvents OvalShape7 As PowerPacks.OvalShape
-    Friend WithEvents LineShape6_2 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red6_2 As PowerPacks.LineShape
     Friend WithEvents LineShape_red6_1 As PowerPacks.LineShape
-    Friend WithEvents LineShape_red5_2 As PowerPacks.LineShape
-    Friend WithEvents LineShape_red5_1 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red4_4 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red4_3 As PowerPacks.LineShape
     Friend WithEvents LineShape40 As PowerPacks.LineShape
     Friend WithEvents OvalShape6 As PowerPacks.OvalShape
     Friend WithEvents OvalShape5 As PowerPacks.OvalShape
     Friend WithEvents OvalShape4 As PowerPacks.OvalShape
-    Friend WithEvents LineShape39 As PowerPacks.LineShape
-    Friend WithEvents LineShape38 As PowerPacks.LineShape
-    Friend WithEvents LineShape37 As PowerPacks.LineShape
-    Friend WithEvents LineShape36 As PowerPacks.LineShape
+    Friend WithEvents LineShape_green7_2 As PowerPacks.LineShape
+    Friend WithEvents LineShape_green7_1 As PowerPacks.LineShape
+    Friend WithEvents LineShape_green6_3 As PowerPacks.LineShape
+    Friend WithEvents LineShape_green6_2 As PowerPacks.LineShape
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
@@ -3131,4 +3239,16 @@ Partial Class Form1
     Friend WithEvents LineShape_red2 As PowerPacks.LineShape
     Friend WithEvents LineShape_red3 As PowerPacks.LineShape
     Friend WithEvents LineShape_red8 As PowerPacks.LineShape
+    Friend WithEvents LineShape_red9 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow4 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow5_2 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow7 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow8_1 As PowerPacks.LineShape
+    Friend WithEvents LineShape_yellow9_5 As PowerPacks.LineShape
+    Friend WithEvents LineShape_green7_4 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy2 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy1 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy5 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy4 As PowerPacks.LineShape
+    Friend WithEvents LineShape_dy3 As PowerPacks.LineShape
 End Class
