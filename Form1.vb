@@ -2,6 +2,7 @@
 
 Public Class Form1
     Public lineLightSeqDict As New Dictionary(Of Form3.Role, String())
+    Public drawState As Form3.Role = Form3.Role.NULL
     Public Sub New()
         '这是form界面，构造函数里必须调用的，不然界面会是空的
         InitializeComponent()
@@ -20,26 +21,32 @@ Public Class Form1
     ' Private frm2 As New Form2
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frm2.Show()
-        frm2.WindowState = FormWindowState.Minimized
+        frm2.WindowState = FormWindowState.Normal
         frm3.Show()
-        frm3.WindowState = FormWindowState.Minimized
+        frm3.WindowState = FormWindowState.Normal
+        '     Dim test As Form4 = New Form4
+        '     test.Show()
+    End Sub
+
+    Private Sub Form1_Click(sender As Object, e As EventArgs) Handles Me.Click
+        Me.TopMost = True
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        'frm2.Visible = Not frm2.Visible   最小化后再打开比隐藏再show绘制的更快一些
-        If frm2.WindowState = FormWindowState.Minimized Then
-            frm2.WindowState = FormWindowState.Normal
-        Else
-            frm2.WindowState = FormWindowState.Minimized   ' cuz max button has been banned
-        End If
+        '   If frm2.WindowState = FormWindowState.Minimized Then
+        '  frm2.WindowState = FormWindowState.Normal
+        '   Else
+        '   frm2.WindowState = FormWindowState.Minimized   ' cuz max button has been banned
+        '    End If
+        frm2.TopMost = Not frm2.TopMost
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-        'frm2.Visible = Not frm2.Visible   最小化后再打开比隐藏再show绘制的更快一些
-        If frm3.WindowState = FormWindowState.Minimized Then
-            frm3.WindowState = FormWindowState.Normal
-        Else
-            frm3.WindowState = FormWindowState.Minimized   ' cuz max button has been banned
-        End If
+        '  If frm3.WindowState = FormWindowState.Minimized Then
+        '  frm3.WindowState = FormWindowState.Normal
+        '    Else
+        '   frm3.WindowState = FormWindowState.Minimized   ' cuz max button has been banned
+        '  End If
+        frm3.TopMost = Not frm3.TopMost
     End Sub
 
     'test passed!

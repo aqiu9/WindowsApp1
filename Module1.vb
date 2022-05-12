@@ -8,6 +8,7 @@
         frm1 = New Form1()
         frm2 = New Form2()
         frm3 = New Form3()
+
         frm1.ShowDialog()
     End Sub
 

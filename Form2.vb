@@ -2,37 +2,32 @@
 
 Public Class Form2
     'vb.net里()表示数组
-    Private consts_k() As String = {
-        72, 82,
-        71, 81,
-        73, 83,
-        52, 62,
-        51, 61,
-        53, 63,
-        32, 42,
-        31, 41,
-        33, 43,
-        12, 22,
-        11, 21,
-        13, 23,
-        3, 4,
-        1, 2
-    }
+    Private consts_k() As String
+    Public Sub New()
+        InitializeComponent()
 
+        Me.SetStyle(ControlStyles.UserPaint, True)
+        Me.SetStyle(ControlStyles.ResizeRedraw, True)
+        Me.SetStyle(ControlStyles.AllPaintingInWmPaint, True)
+        Me.SetStyle(ControlStyles.OptimizedDoubleBuffer, True)
 
-    Private Sub Form2_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
-        If Me.Visible = False Then
-            Me.Hide()
-        Else
-            Me.Show()
-        End If
-    End Sub
+        Me.consts_k = {
+            72, 82,
+            71, 81,
+            73, 83,
+            52, 62,
+            51, 61,
+            53, 63,
+            32, 42,
+            31, 41,
+            33, 43,
+            12, 22,
+            11, 21,
+            13, 23,
+            3, 4,
+            1, 2
+        }
 
-    Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
-        frm1.Close()
-    End Sub
-
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
         For i As Integer = 0 To 9 '左边10个表格
             Dim tar As TableLayoutPanel
             tar = Me.Controls.Find("TableLayoutPanel_left_" & i, True)(0) '注意这里的0 都是从0里找，具体的还没深究
@@ -86,7 +81,24 @@ Public Class Form2
         'lb2.TextAlign = ContentAlignment.MiddleLeft
         'lb2.Dock = DockStyle.Fill
         'Me.TableLayoutPanel2.Controls.Add(lb2)
+
     End Sub
+
+    Private Sub Form2_VisibleChanged(sender As Object, e As EventArgs) Handles Me.VisibleChanged
+        If Me.Visible = False Then
+            Me.Hide()
+        Else
+            Me.Show()
+        End If
+    End Sub
+
+    Private Sub Form2_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frm1.Close()
+    End Sub
+
+    ' Private Sub Form2_Load(sender As Object, e As EventArgs) Handles Me.Load
+    '
+    '  End Sub
 
     'override
     'ban the close button at the top of form.

@@ -2807,7 +2807,7 @@ Partial Class Form1
         Me.Label101.Location = New System.Drawing.Point(743, 42)
         Me.Label101.Margin = New System.Windows.Forms.Padding(0)
         Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(13, 10)
+        Me.Label101.Size = New System.Drawing.Size(27, 10)
         Me.Label101.TabIndex = 110
         Me.Label101.Text = "▲"
         '
@@ -2819,7 +2819,7 @@ Partial Class Form1
         Me.Label102.Location = New System.Drawing.Point(408, 115)
         Me.Label102.Margin = New System.Windows.Forms.Padding(0)
         Me.Label102.Name = "Label102"
-        Me.Label102.Size = New System.Drawing.Size(10, 11)
+        Me.Label102.Size = New System.Drawing.Size(22, 10)
         Me.Label102.TabIndex = 111
         Me.Label102.Text = "▼"
         '
@@ -2828,10 +2828,10 @@ Partial Class Form1
         Me.Label103.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label103.BackColor = System.Drawing.Color.Transparent
-        Me.Label103.Location = New System.Drawing.Point(41, 120)
+        Me.Label103.Location = New System.Drawing.Point(41, 122)
         Me.Label103.Margin = New System.Windows.Forms.Padding(0)
         Me.Label103.Name = "Label103"
-        Me.Label103.Size = New System.Drawing.Size(13, 13)
+        Me.Label103.Size = New System.Drawing.Size(18, 10)
         Me.Label103.TabIndex = 112
         Me.Label103.Text = "▼"
         '

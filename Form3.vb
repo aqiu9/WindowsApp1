@@ -89,7 +89,8 @@
                     light2.BackStyle = PowerPacks.BackStyle.Transparent
                     setColorByRole(Role.M, Color.Black)
                     '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                    drawInMainUI(Role.NULL, Color.Red, 500)
+                    drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                    frm1.drawState = Role.NULL
                 End If
             Case Role.RENJIE
                 If light1.BackColor = Color.Red AndAlso light2.BackColor = Color.White Then
@@ -120,7 +121,8 @@
                 setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
                 setColorByRole(Role.A, Color.Black)
                 '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.NULL, Color.Red, 500)
+                drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                frm1.drawState = Role.NULL
             Case Role.M
                 '任何M+A/B/C的组合，都得保证M没有被设置故障
                 If mIsOutOfOrder Then
@@ -135,7 +137,8 @@
                 setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
                 setColorByRole(Role.A, Color.DeepSkyBlue)
                 '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.A, Color.Yellow, 500)
+                drawInMainUI(Role.A, Color.Yellow, 3, 500, True)
+                frm1.drawState = Role.A
         End Select
 
         msgStack.Push(Role.A)
@@ -154,7 +157,8 @@
                 setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
                 setColorByRole(Role.B, Color.Black)
                 '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.NULL, Color.Red, 500)
+                drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                frm1.drawState = Role.NULL
             Case Role.M
                 '任何M+A/B/C的组合，都得保证M没有被设置故障
                 If mIsOutOfOrder Then
@@ -169,7 +173,8 @@
                 setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
                 setColorByRole(Role.B, Color.DeepSkyBlue)
                 '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.B, Color.Green, 500)
+                drawInMainUI(Role.B, Color.Green, 3, 500, True)
+                frm1.drawState = Role.B
         End Select
         msgStack.Push(Role.B)
     End Sub
@@ -187,7 +192,8 @@
                 setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
                 setColorByRole(Role.C, Color.Black)
                 '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.NULL, Color.Red, 500)
+                drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                frm1.drawState = Role.NULL
             Case Role.M
                 '任何M+A/B/C的组合，都得保证M没有被设置故障
                 If mIsOutOfOrder Then
@@ -203,7 +209,8 @@
                 setLightColor("OvalShape_ME2", Color.Yellow, PowerPacks.BackStyle.Opaque)
                 setColorByRole(Role.C, Color.DeepSkyBlue)
                 '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.C, Color.Yellow, 500)
+                drawInMainUI(Role.C, Color.Yellow, 3, 500, True)
+                frm1.drawState = Role.C
         End Select
         msgStack.Push(Role.C)
     End Sub
@@ -216,6 +223,7 @@
         shapes = Me.ShapeContainer1.Shapes
         line = shapes.Item(shapes.IndexOfKey(name))
         line.BorderColor = color
+        line.Update()
     End Sub
 
     '注意，这里是获取的form3的组件 用的Me
@@ -288,28 +296,76 @@
         Dim light As PowerPacks.OvalShape = getPowerPackComponent(Of PowerPacks.OvalShape)(name)
         light.BackStyle = backStyle
         light.BackColor = tar
+        light.Update()
     End Sub
 
-    Private Sub drawInMainUI(role As Role, tar As Color, interval As Integer)
+    Private Sub drawInMainUI(role As Form3.Role, tar As Color, lineWidth As Integer, interval As Integer, isPreClean As Boolean)
+        Me.Enabled = False  '因为是同步的，单线程的，所以防止用户多次操作
+        Me.Cursor = Cursors.WaitCursor
+
+        If isPreClean Then
+            '该参数为了让每次绘制前，把之前绘制过的痕迹给还原消去
+            preClean()
+        End If
         Dim dict = Form1.lineLightSeqDict
         'Dim colorLen As Integer = tar.Name.Length   '因为命名方式还是有点不统一，没法用这种方式
         Dim preName As String = ""
         For Each name As String In dict.Item(role)
             Dim lastIndex As Integer = name.LastIndexOf("_"c)  'LineShape_red1_1
             Dim temp As String = name.Substring(0, lastIndex)
+
             '是9说明和上一个不是一组的，不是一批同时亮的line || 从上一个name里搜indexOf(LineShape_red1)，返回是-1，说明不是一组的，是需要延迟一下的。
             If lastIndex = 9 OrElse preName.IndexOf(temp) < 0 Then
                 Threading.Thread.Sleep(interval)
             End If
-            setLineColorAndWidth(name, tar, 3)
+            setLineColorAndWidth(name, tar, lineWidth) '先绘制再sleep，可以避免第一次绘制的时候空等待,但是不能先绘制，你得看看要不要睡再绘制，不然会"错位"，测试一下就知道了
             preName = name
         Next
+
+        Me.Cursor = Cursors.Default
+        Me.Enabled = True
+    End Sub
+
+    Private Sub drawInMainUI(role As Form3.Role, tar As Color, lineWidth As Integer, interval As Integer, isPreClean As Boolean, isRealTimeUpdate As Boolean)
+        If isPreClean Then
+            '该参数为了让每次绘制前，把之前绘制过的痕迹给还原消去
+            preClean()
+        End If
+        Dim dict = Form1.lineLightSeqDict
+        'Dim colorLen As Integer = tar.Name.Length   '因为命名方式还是有点不统一，没法用这种方式
+        Dim preName As String = ""
+        For Each name As String In dict.Item(role)
+            Dim lastIndex As Integer = name.LastIndexOf("_"c)  'LineShape_red1_1
+            Dim temp As String = name.Substring(0, lastIndex)
+            setLineColorAndWidth(name, tar, lineWidth, isRealTimeUpdate) '先绘制再sleep，可以避免第一次绘制的时候空等待
+
+            '是9说明和上一个不是一组的，不是一批同时亮的line || 从上一个name里搜indexOf(LineShape_red1)，返回是-1，说明不是一组的，是需要延迟一下的。
+            If lastIndex = 9 OrElse preName.IndexOf(temp) < 0 Then
+                Threading.Thread.Sleep(interval)
+            End If
+            preName = name
+        Next
+    End Sub
+
+    '每次绘制前，把之前绘制过的痕迹给还原消去
+    Private Sub preClean()
+        '       drawInMainUI(frm1.drawState, Color.Black, 1, 0, False)  不想带update，这样恢复的时候有点视觉延迟, 所以重载了一下
+        drawInMainUI(frm1.drawState, Color.Black, 1, 0, False, False)
     End Sub
 
     Private Sub setLineColorAndWidth(name As String, tar As Color, borderWidth As Integer)
         Dim line As PowerPacks.LineShape = getPowerPackComponentFromForm1(Of PowerPacks.LineShape)(name)
         line.BorderColor = tar
         line.BorderWidth = borderWidth
+        frm1.Update() '这个方法真j8好用，就是立刻把在缓冲区里的绘制操作给绘制了，起到了flush的效果
+    End Sub
+    Private Sub setLineColorAndWidth(name As String, tar As Color, borderWidth As Integer, isRealTimeUpdate As Boolean)
+        Dim line As PowerPacks.LineShape = getPowerPackComponentFromForm1(Of PowerPacks.LineShape)(name)
+        line.BorderColor = tar
+        line.BorderWidth = borderWidth
+        If isRealTimeUpdate Then
+            frm1.Update() '这个方法真j8好用，就是立刻把在缓冲区里的绘制操作给绘制了，起到了flush的效果
+        End If
     End Sub
 
     'override
