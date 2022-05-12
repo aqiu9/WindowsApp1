@@ -11,11 +11,14 @@ Public Class Form1
         Dim MEA_YELLOW() As String = {"LineShape_red1", "LineShape_red2", "LineShape_red3", "LineShape_yellow4", "LineShape_yellow5_1", "LineShape_yellow5_2", "LineShape_yellow6", "LineShape_yellow7", "LineShape_yellow8_1", "LineShape_yellow8_2", "LineShape_yellow8_3", "LineShape_yellow9_1", "LineShape_yellow9_2", "LineShape_yellow9_3", "LineShape_yellow9_4", "LineShape_yellow9_5", "LineShape_red8", "LineShape_red9"}
         Dim MEB_GREEN() As String = {"LineShape_red1", "LineShape_red2", "LineShape_red3", "LineShape_yellow4", "LineShape_yellow5_1", "LineShape_green6_1", "LineShape_green6_2", "LineShape_green6_3", "LineShape_green7_1", "LineShape_green7_2", "LineShape_green7_3", "LineShape_green7_4", "LineShape_yellow9_5", "LineShape_red8", "LineShape_red9"}
         Dim MEC_DOUBLEYELLOW() As String = {"LineShape_red1", "LineShape_red2", "LineShape_red3", "LineShape_yellow4", "LineShape_yellow5_1", "LineShape_yellow5_2", "LineShape_yellow6", "LineShape_yellow7", "LineShape_yellow8_1", "LineShape_yellow8_2", "LineShape_yellow8_3", "LineShape_yellow9_1", "LineShape_yellow9_2", "LineShape_yellow9_3", "LineShape_yellow9_4", "LineShape_yellow9_5", "LineShape_red8", "LineShape_red9", "LineShape_dy1", "LineShape_dy2", "LineShape_dy3", "LineShape_dy4", "LineShape_dy5", "LineShape_dy6_1", "LineShape_dy6_2", "LineShape_dy6_3", "LineShape_dy7_1", "LineShape_dy7_2", "LineShape_dy7_3"}
+        '特殊地，在NULL_RED的基础上再绘制BLUE
+        Dim MELINE_BLUE() As String = {"LineShape_dy1", "LineShape_dy2", "LineShape_dy3", "LineShape_blue4_1", "LineShape_blue4_2", "LineShape_blue5_1", "LineShape_blue5_2", "LineShape_blue5_3", "LineShape_blue6_0", "LineShape_blue6_1", "LineShape_blue6_2", "LineShape_blue6_3", "LineShape_blue6_4", "LineShape_blue7_1", "LineShape_blue7_2", "LineShape_red8", "LineShape_red9"}
 
         lineLightSeqDict.Add(Form3.Role.A, MEA_YELLOW)
         lineLightSeqDict.Add(Form3.Role.B, MEB_GREEN)
         lineLightSeqDict.Add(Form3.Role.C, MEC_DOUBLEYELLOW)
         lineLightSeqDict.Add(Form3.Role.NULL, NULL_RED)
+        lineLightSeqDict.Add(Form3.Role.LINE, MELINE_BLUE)
     End Sub
     'Public Shared frm2 As New Form2  'shared equals static in Java
     ' Private frm2 As New Form2

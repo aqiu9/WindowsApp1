@@ -10,7 +10,7 @@
         B
         C
         M
-        'LINE
+        LINE
         QUXIAO
         RENJIE
         NULL
@@ -71,14 +71,6 @@
 
         Dim light1 As PowerPacks.OvalShape = getPowerPackComponent(Of PowerPacks.OvalShape)("OvalShape_ME1")
         Dim light2 As PowerPacks.OvalShape = getPowerPackComponent(Of PowerPacks.OvalShape)("OvalShape_ME2")
-        '特别地，如果设置了故障ischecked()，点击me需要设置红白灯
-        If isChecked() Then
-            mIsOutOfOrder = True
-            light1.BackStyle = PowerPacks.BackStyle.Opaque
-            light1.BackColor = Color.Red
-            light2.BackStyle = PowerPacks.BackStyle.Opaque
-            light2.BackColor = Color.White
-        End If
 
         Select Case pre
             '这里的取消不用初始化M的灯，因为renjie会初始化它，不renjie则无变化
@@ -97,6 +89,7 @@
                 If light1.BackColor = Color.Red AndAlso light2.BackColor = Color.White Then
                     'renjie之后全恢复初始状态
                     mIsOutOfOrder = False
+                    setChecked(False)  '注意这里 renjie之后把设置故障也取消了，否则点在checked状态下点renjie再点Me，会同时触发renjie和红蓝的绘制
                     light1.BackColor = Color.Red
                     light2.BackStyle = PowerPacks.BackStyle.Transparent
                     setColorByRole(Role.M, Color.Black)
@@ -107,6 +100,21 @@
                 '无对应操作的时候要不要把上一个操作重新压栈呢？貌似目前的实现都可以
                 'msgStack.Push(pre)
         End Select
+
+        '设置故障的逻辑放在select case后边更合适一点点，因为如果在checked状态下，点了取消再点Me，按理应该先取消，取消完了再设置故障
+        '特别地，如果设置了故障ischecked()，点击me需要设置红白灯
+        If isChecked() Then
+            mIsOutOfOrder = True
+            light1.BackStyle = PowerPacks.BackStyle.Opaque
+            light1.BackColor = Color.Red
+            light2.BackStyle = PowerPacks.BackStyle.Opaque
+            light2.BackColor = Color.White
+
+            '红白灯特殊，对应红色和蓝色两种色，所以要这么画，preclean的时候也特殊处理了一下
+            drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+            drawInMainUI(Role.LINE, Color.Blue, 3, 500, isPreClean:=False, isRealTimeUpdate:=True)
+            frm1.drawState = Role.LINE
+        End If
 
         msgStack.Push(Role.M)
     End Sub
@@ -252,6 +260,12 @@
         Return cb.Checked
     End Function
 
+    Private Sub setChecked(value As Boolean)
+        Dim cb As CheckBox
+        cb = Me.Controls.Find("CheckBox1", True)(0)  '注意checkbox不是powerpacks里的组件，所以不能调用getPowerPackComponent(Of CheckBox)("CheckBox1")
+        cb.Checked = value
+    End Sub
+
     Private Sub flipX()
         Dim line As PowerPacks.LineShape
         Dim shapes As PowerPacks.ShapeCollection 'powerpacks' stuffs are in ShapeContainer!!
@@ -340,12 +354,12 @@
         For Each name As String In dict.Item(role)
             Dim lastIndex As Integer = name.LastIndexOf("_"c)  'LineShape_red1_1
             Dim temp As String = name.Substring(0, lastIndex)
-            setLineColorAndWidth(name, tar, lineWidth, isRealTimeUpdate) '先绘制再sleep，可以避免第一次绘制的时候空等待
 
             '是9说明和上一个不是一组的，不是一批同时亮的line || 从上一个name里搜indexOf(LineShape_red1)，返回是-1，说明不是一组的，是需要延迟一下的。
             If lastIndex = 9 OrElse preName.IndexOf(temp) < 0 Then
                 Threading.Thread.Sleep(interval)
             End If
+            setLineColorAndWidth(name, tar, lineWidth, isRealTimeUpdate) '先绘制再sleep，可以避免第一次绘制的时候空等待
             preName = name
         Next
     End Sub
@@ -354,6 +368,10 @@
     Private Sub preClean()
         '       drawInMainUI(frm1.drawState, Color.Black, 1, 0, False)  不想带update，这样恢复的时候有点视觉延迟, 所以重载了一下
         drawInMainUI(frm1.drawState, Color.Black, 1, 0, False, False)
+
+        If frm1.drawState = Role.LINE Then  'Role.line比较特殊，两种色但是两种色不一样，所以先绘制一下第一种颜色(red)
+            drawInMainUI(Role.NULL, Color.Black, 1, 0, False, False)
+        End If
     End Sub
 
     Private Sub setLineColorAndWidth(name As String, tar As Color, borderWidth As Integer)
