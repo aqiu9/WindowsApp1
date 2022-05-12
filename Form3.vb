@@ -27,9 +27,10 @@
         frm1.Close()
     End Sub
 
-    '   Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-    '   End Sub
+    Private Sub Form3_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        '这里是初始化form1的draw状态为Null
+        drawInMainUI(Role.NULL, Color.Red, 3, 0, isPreClean:=False, isRealTimeUpdate:=False)
+    End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         Dim cb As CheckBox
@@ -99,6 +100,8 @@
                     light1.BackColor = Color.Red
                     light2.BackStyle = PowerPacks.BackStyle.Transparent
                     setColorByRole(Role.M, Color.Black)
+                    drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                    frm1.drawState = Role.NULL
                 End If
             Case Else
                 '无对应操作的时候要不要把上一个操作重新压栈呢？貌似目前的实现都可以
