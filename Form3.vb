@@ -103,7 +103,7 @@
 
         '设置故障的逻辑放在select case后边更合适一点点，因为如果在checked状态下，点了取消再点Me，按理应该先取消，取消完了再设置故障
         '特别地，如果设置了故障ischecked()，点击me需要设置红白灯
-        If isChecked() Then
+        If isChecked() And frm1.drawState <> Role.LINE Then
             mIsOutOfOrder = True
             light1.BackStyle = PowerPacks.BackStyle.Opaque
             light1.BackColor = Color.Red
@@ -127,13 +127,18 @@
 
         Select Case pre
             Case Role.QUXIAO
-                '无论是哪种取消，肯定都和M有关，M的灯要回到初始状态，单红
-                setLightColor("OvalShape_ME1", Color.Red, PowerPacks.BackStyle.Opaque)
-                setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
-                setColorByRole(Role.A, Color.Black)
-                '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
-                frm1.drawState = Role.NULL
+                If frm1.drawState = Role.A Then
+                    setColorByRole(Role.A, Color.Black)
+
+                    If Not mIsOutOfOrder Then
+                        '无论是哪种取消，肯定都和M有关，M的灯要回到初始状态，单红
+                        setLightColor("OvalShape_ME1", Color.Red, PowerPacks.BackStyle.Opaque)
+                        setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
+                        '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
+                        drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                        frm1.drawState = Role.NULL
+                    End If
+                End If
             Case Role.M
                 '任何M+A/B/C的组合，都得保证M没有被设置故障
                 If mIsOutOfOrder Then
@@ -163,13 +168,19 @@
 
         Select Case pre
             Case Role.QUXIAO
-                '无论是哪种取消，肯定都和M有关，M的灯要回到初始状态，单红
-                setLightColor("OvalShape_ME1", Color.Red, PowerPacks.BackStyle.Opaque)
-                setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
-                setColorByRole(Role.B, Color.Black)
-                '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
-                frm1.drawState = Role.NULL
+                If frm1.drawState = Role.B Then
+                    setColorByRole(Role.B, Color.Black)
+
+                    If Not mIsOutOfOrder Then
+                        '无论是哪种取消，肯定都和M有关，M的灯要回到初始状态，单红
+                        setLightColor("OvalShape_ME1", Color.Red, PowerPacks.BackStyle.Opaque)
+                        setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
+                        '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
+                        drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                        frm1.drawState = Role.NULL
+                    End If
+                End If
+
             Case Role.M
                 '任何M+A/B/C的组合，都得保证M没有被设置故障
                 If mIsOutOfOrder Then
@@ -198,13 +209,18 @@
         'select does not need "break"
         Select Case pre
             Case Role.QUXIAO
-                '无论是哪种取消，肯定都和M有关，M的灯要回到初始状态，单红
-                setLightColor("OvalShape_ME1", Color.Red, PowerPacks.BackStyle.Opaque)
-                setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
-                setColorByRole(Role.C, Color.Black)
-                '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
-                drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
-                frm1.drawState = Role.NULL
+                If frm1.drawState = Role.C Then
+                    setColorByRole(Role.C, Color.Black)
+
+                    If Not mIsOutOfOrder Then
+                        '无论是哪种取消，肯定都和M有关，M的灯要回到初始状态，单红
+                        setLightColor("OvalShape_ME1", Color.Red, PowerPacks.BackStyle.Opaque)
+                        setLightColor("OvalShape_ME2", Color.Tomato, PowerPacks.BackStyle.Transparent)
+                        '联锁页面处理完，开始在mainUI中绘制，每个元器件之间延迟500ms
+                        drawInMainUI(Role.NULL, Color.Red, 3, 500, True)
+                        frm1.drawState = Role.NULL
+                    End If
+                End If
             Case Role.M
                 '任何M+A/B/C的组合，都得保证M没有被设置故障
                 If mIsOutOfOrder Then
