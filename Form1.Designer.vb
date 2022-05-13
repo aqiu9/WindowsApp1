@@ -23,6 +23,8 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
+        Me.LineShape_blue6_4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
+        Me.LineShape_blue4_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_blue7_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_dy5 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.LineShape_dy4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
@@ -310,8 +312,6 @@ Partial Class Form1
         Me.Label101 = New System.Windows.Forms.Label()
         Me.Label102 = New System.Windows.Forms.Label()
         Me.Label103 = New System.Windows.Forms.Label()
-        Me.LineShape_blue4_2 = New Microsoft.VisualBasic.PowerPacks.LineShape()
-        Me.LineShape_blue6_4 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.SuspendLayout()
         '
         'ShapeContainer1
@@ -323,6 +323,22 @@ Partial Class Form1
         Me.ShapeContainer1.Size = New System.Drawing.Size(899, 800)
         Me.ShapeContainer1.TabIndex = 0
         Me.ShapeContainer1.TabStop = False
+        '
+        'LineShape_blue6_4
+        '
+        Me.LineShape_blue6_4.Name = "LineShape_blue6_4"
+        Me.LineShape_blue6_4.X1 = 860
+        Me.LineShape_blue6_4.X2 = 860
+        Me.LineShape_blue6_4.Y1 = 410
+        Me.LineShape_blue6_4.Y2 = 590
+        '
+        'LineShape_blue4_2
+        '
+        Me.LineShape_blue4_2.Name = "LineShape_blue4_2"
+        Me.LineShape_blue4_2.X1 = 523
+        Me.LineShape_blue4_2.X2 = 523
+        Me.LineShape_blue4_2.Y1 = 178
+        Me.LineShape_blue4_2.Y2 = 369
         '
         'LineShape_blue7_2
         '
@@ -2818,7 +2834,7 @@ Partial Class Form1
         Me.Label101.Location = New System.Drawing.Point(743, 42)
         Me.Label101.Margin = New System.Windows.Forms.Padding(0)
         Me.Label101.Name = "Label101"
-        Me.Label101.Size = New System.Drawing.Size(15, 10)
+        Me.Label101.Size = New System.Drawing.Size(18, 10)
         Me.Label101.TabIndex = 110
         Me.Label101.Text = "▲"
         '
@@ -2830,7 +2846,7 @@ Partial Class Form1
         Me.Label102.Location = New System.Drawing.Point(408, 115)
         Me.Label102.Margin = New System.Windows.Forms.Padding(0)
         Me.Label102.Name = "Label102"
-        Me.Label102.Size = New System.Drawing.Size(17, 10)
+        Me.Label102.Size = New System.Drawing.Size(16, 10)
         Me.Label102.TabIndex = 111
         Me.Label102.Text = "▼"
         '
@@ -2842,25 +2858,9 @@ Partial Class Form1
         Me.Label103.Location = New System.Drawing.Point(41, 122)
         Me.Label103.Margin = New System.Windows.Forms.Padding(0)
         Me.Label103.Name = "Label103"
-        Me.Label103.Size = New System.Drawing.Size(21, 10)
+        Me.Label103.Size = New System.Drawing.Size(17, 10)
         Me.Label103.TabIndex = 112
         Me.Label103.Text = "▼"
-        '
-        'LineShape_blue4_2
-        '
-        Me.LineShape_blue4_2.Name = "LineShape_blue4_2"
-        Me.LineShape_blue4_2.X1 = 523
-        Me.LineShape_blue4_2.X2 = 523
-        Me.LineShape_blue4_2.Y1 = 178
-        Me.LineShape_blue4_2.Y2 = 369
-        '
-        'LineShape_blue6_4
-        '
-        Me.LineShape_blue6_4.Name = "LineShape_blue6_4"
-        Me.LineShape_blue6_4.X1 = 860
-        Me.LineShape_blue6_4.X2 = 860
-        Me.LineShape_blue6_4.Y1 = 410
-        Me.LineShape_blue6_4.Y2 = 590
         '
         'Form1
         '
