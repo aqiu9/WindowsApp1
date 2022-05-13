@@ -303,7 +303,12 @@
                 Dim shapes = Me.ShapeContainer1.Shapes
                 Dim lines = shapes.OfType(Of PowerPacks.LineShape)
                 For Each e In lines
-                    If e.Name <> "X" And e.Name <> "X_down3" Then
+                    '     If e.Name <> "X" And e.Name <> "X_down3" Then '这里有bug 如果没有isChecked的时候，对b全线点亮也应该恢复X_down3
+                    If e.Name <> "X" Then
+                        If e.Name = "X_down3" AndAlso isChecked() Then
+                            Continue For
+                        End If
+
                         e.BorderColor = tar
                     End If
                 Next
