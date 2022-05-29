@@ -1,6 +1,7 @@
 ﻿Imports System.ComponentModel
 
 Public Class Form2
+    Public Delegate Sub no_arg_form2() '声明一个委托或者叫代理用于跨线程操作ui
     'vb.net里()表示数组
     Private consts_k() As String
     Public Sub New()
@@ -124,6 +125,8 @@ Public Class Form2
         lb.Dock = DockStyle.Fill
         Return lb
     End Function
+
+
     Private Function getAInput()
         Dim tb As New TextBox
         'tb.Height = 1

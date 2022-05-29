@@ -1,6 +1,7 @@
 ﻿Imports System.IO
 
 Public Class Form1
+
     Public lineLightSeqDict As New Dictionary(Of Form3.Role, String())
     Public drawState As Form3.Role = Form3.Role.NULL
     Public Sub New()
@@ -24,25 +25,41 @@ Public Class Form1
     ' Private frm2 As New Form2
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         frm2.Show()
-        frm2.WindowState = FormWindowState.Normal
+        frm2.WindowState = FormWindowState.Minimized  '根据需求，form2表格想要一开始隐藏了，单击再弹出来
         frm3.Show()
         frm3.WindowState = FormWindowState.Normal
         '     Dim test As Form4 = New Form4
         '     test.Show()
     End Sub
 
-    Private Sub Form1_Click(sender As Object, e As EventArgs) Handles Me.Click
-        Me.TopMost = True
-    End Sub
+    '这个是置顶、、窗口默认是可以点哪个哪个就在最前端的
+    ' Private Sub Form1_Click(sender As Object, e As EventArgs) Handles Me.Click
+    '  Me.TopMost = True
+    ' End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        '   If frm2.WindowState = FormWindowState.Minimized Then
-        '  frm2.WindowState = FormWindowState.Normal
-        '   Else
-        '   frm2.WindowState = FormWindowState.Minimized   ' cuz max button has been banned
-        '    End If
-        frm2.TopMost = Not frm2.TopMost
+        '使用代理（委托）的关键就是，代理本身是一个模子，所以方法签名一样的跨线程ui操作都可以复用同一个代理声明。
+        '默认单线程，即所有的form都在一个线程里
+        '然后在使用的时候只需要把自己实现的function或子过程的地址传给代理类型的变量即可，这就算对代理实例化了。
+        'Dim noArgDeleForm2 As Form2.no_arg_form2 = AddressOf flipForm2
+
+        'Await Task.Run(New Action(Sub()
+        ''原理应该是反射
+        '   End Sub))
+
+        flipForm2()
+        ' frm2.TopMost = Not frm2.TopMost
     End Sub
+    '为了多线程载入form2，这里实例化form2里声明的代理 子过程，然后才可以跨线程操作（美其名曰 代理）
+    '注意private时不能跨文件访问
+    Public Sub flipForm2()
+        If frm2.WindowState = FormWindowState.Minimized Then
+            frm2.WindowState = FormWindowState.Normal
+        Else
+            frm2.WindowState = FormWindowState.Minimized   ' cuz max button has been banned
+        End If
+    End Sub
+
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         '  If frm3.WindowState = FormWindowState.Minimized Then
         '  frm3.WindowState = FormWindowState.Normal

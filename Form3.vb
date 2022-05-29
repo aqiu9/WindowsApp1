@@ -63,7 +63,7 @@
         cb.Visible = Not cb.Visible
     End Sub
 
-    Private Sub Me_Click(sender As Object, e As EventArgs) Handles OvalShape_ME1.Click, OvalShape_ME2.Click, M.Click
+    Private Sub Me_Click(sender As Object, e As EventArgs) Handles OvalShape_ME1.Click, OvalShape_ME2.Click, OvalShape2.Click, OvalShape1.Click
         Dim pre = Role.NULL
         If msgStack.Count > 0 Then
             pre = msgStack.Pop()
@@ -119,7 +119,7 @@
         msgStack.Push(Role.M)
     End Sub
 
-    Private Sub A_Click(sender As Object, e As EventArgs) Handles OvalShape_A1.Click, OvalShape_A2.Click, A.Click
+    Private Sub A_Click(sender As Object, e As EventArgs) Handles OvalShape_A1.Click, OvalShape_A2.Click
         Dim pre = Role.NULL
         If msgStack.Count > 0 Then
             pre = msgStack.Pop()
@@ -160,7 +160,7 @@
         msgStack.Push(Role.A)
     End Sub
 
-    Private Sub B_Click(sender As Object, e As EventArgs) Handles OvalShape_B1.Click, OvalShape_B2.Click, B.Click
+    Private Sub B_Click(sender As Object, e As EventArgs) Handles OvalShape_B1.Click, OvalShape_B2.Click
         Dim pre = Role.NULL
         If msgStack.Count > 0 Then
             pre = msgStack.Pop()
@@ -201,7 +201,7 @@
         msgStack.Push(Role.B)
     End Sub
 
-    Private Sub C_Click(sender As Object, e As EventArgs) Handles OvalShape_C1.Click, OvalShape_C2.Click, C.Click
+    Private Sub C_Click(sender As Object, e As EventArgs) Handles OvalShape_C1.Click, OvalShape_C2.Click
         Dim pre = Role.NULL
         If msgStack.Count > 0 Then
             pre = msgStack.Pop()
@@ -304,7 +304,8 @@
                 Dim lines = shapes.OfType(Of PowerPacks.LineShape)
                 For Each e In lines
                     '     If e.Name <> "X" And e.Name <> "X_down3" Then '这里有bug 如果没有isChecked的时候，对b全线点亮也应该恢复X_down3
-                    If e.Name <> "X" Then
+                    Dim flippers As ArrayList = New ArrayList({"X", "XX", "XXX", "XXXX"})
+                    If Not flippers.Contains(e.Name) Then
                         If e.Name = "X_down3" AndAlso isChecked() Then
                             Continue For
                         End If
